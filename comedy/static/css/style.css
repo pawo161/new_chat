@@ -1,0 +1,59 @@
+body {
+	height: 100%
+  }
+.top-padding {
+	margin-top: 10px;
+}
+
+.user-message {
+	background-color: rgba(97, 10, 209, 0.33);
+}
+
+.chat-message {
+	background-color: rgba(139, 8, 15, 0.35);
+}
+h1{
+	color: white;
+	text-align: center;
+}
+.send-btn {
+	position: absolute;
+    top: 12px;
+    font-size: 30px;
+    color: black;
+    right: 20px;
+}
+
+.send-btn:hover {
+	color: rgba(48, 175, 48, 0.61);
+}
+
+#text-box {
+	position: relative;
+	bottom: 8px;
+	width: 95%;
+}
+
+#text-box textarea {
+	border: 2px solid;
+}
+
+.navbar {
+	background-color: silver;
+	
+	text-align: justify;
+	
+}
+
+#app {
+	position: absolute;
+	
+}
+
+#app .card {
+	margin-bottom: 5px;
+}
+
+#app p {
+	margin-bottom: 0px;
+}
