@@ -22,10 +22,10 @@ import os
 import requests
 
 
-model_name="124M"
-if not os.path.isdir(os.path.join("models", model_name)):
-	print(f"Downloading {model_name} model...")
-	gpt2.download_gpt2(model_name=model_name) 
+# model_name="124M"
+# if not os.path.isdir(os.path.join("models", model_name)):
+# 	print(f"Downloading {model_name} model...")
+# 	gpt2.download_gpt2(model_name=model_name) 
 # checkpoint_path = "/Users/pawelk/Downloads/django-chat/checkpoint/run1"
 
 # response = chatbot.get_response("Hi there")
@@ -41,7 +41,7 @@ if not os.path.isdir(os.path.join("models", model_name)):
 @csrf_exempt
 def get_response(request):
 	response = {'status': None}
-	f = open('blank.txt', 'r+')	
+	# f = open('blank.txt', 'r+')	
 	
 	
 	if request.method == 'POST':
@@ -49,27 +49,27 @@ def get_response(request):
 		message = data['message']
 		# f.write()
 		print(message)
-		numb = random.randint(31,88)	
-		if message=="random":
-			sess = gpt2.start_tf_sess()
-			gpt2.load_gpt2(sess)
-			chat_response = gpt2.generate(sess,
-				# prefix=message,
-				# include_prefix=False,
-				length=numb,
-				temperature=0.7,
-				nsamples=5,
-				batch_size=5,
-				top_p=0.9,
-				top_k=20,
-				# truncate="<|endoftext|>",
-				return_as_list=True)[0]
+		# numb = random.randint(31,88)	
+		# if message=="random":
+		# 	sess = gpt2.start_tf_sess()
+		# 	gpt2.load_gpt2(sess)
+		# 	chat_response = gpt2.generate(sess,
+		# 		# prefix=message,
+		# 		# include_prefix=False,
+		# 		length=numb,
+		# 		temperature=0.7,
+		# 		nsamples=5,
+		# 		batch_size=5,
+		# 		top_p=0.9,
+		# 		top_k=20,
+		# 		# truncate="<|endoftext|>",
+		# 		return_as_list=True)[0]
 				
-			response['message'] = {'text': chat_response, 'user': False, 'chat_bot': True, 'username' : "Bot: "}
-			response['status'] = 'ok'
-		else:
+		# 	response['message'] = {'text': chat_response, 'user': False, 'chat_bot': True, 'username' : "Bot: "}
+		# 	response['status'] = 'ok'
+		# else:
     		
-			chat_response = chatbot.get_response(message).text
+		chat_response = chatbot.get_response(message).text
 			# chat_response2 = gpt2.generate(sess,
 			# 	prefix=message,
 			# 	include_prefix=True,
@@ -85,8 +85,8 @@ def get_response(request):
 			
 			
 			
-			response['message'] = {'text': chat_response, 'user': False, 'chat_bot': True, 'username' : "Bot: "}
-			response['status'] = 'ok'
+		response['message'] = {'text': chat_response, 'user': False, 'chat_bot': True, 'username' : "Bot: "}
+		response['status'] = 'ok'
 			# chat_response2.rstrip()
 			# f.write("Paul: " + message + "\nBot: " + chat_response2 + "\n")
 			# if len(f.read()) > 200:
