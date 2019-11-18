@@ -1,4 +1,0 @@
-Paul: One of the most interesting problems in NLP has always been human-like conversation and many are still considering passing the Turing Test as the holy grail of the field. In this post, I show how to use a state of the art model on your own data (I use my own messages sent on facebook) to generate (somewhat) realistic conversations.
-Bot: O of the most interesting problems in NLP has always been human-like conversation and many are still considering passing the Turing Test as the holy grail of the field. In this post, I show how to use a state of the art model on your own data (I use my own messages sent on facebook) to generate (somewhat) realistic conversations.
-
-Let's start with an example: a user has created a user named "__example" and is currently asking for "foo" and it is time to ask for "bar". The user is now creating a new message and creating a new message in
